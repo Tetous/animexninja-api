@@ -3,7 +3,7 @@ const { v4 } = require("uuid");
 const cheerio = require("cheerio");
 const cors = require("cors");
 const rs = require("request");
-const port = 5000;
+const port = 8080;
 app.use(cors());
 const baseURL = "https://gogoanime.ai/";
 
@@ -333,6 +333,6 @@ app.get("/api/list/:variable/:page", (req, res) => {
   });
 });
 
-app.listen(port, () => console.log("running on 5000"));
+app.listen(port, () => console.log("running on 8080"));
 
 module.exports = app;
