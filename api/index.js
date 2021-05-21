@@ -5,7 +5,7 @@ const cors = require("cors");
 const rs = require("request");
 const port = 8080;
 app.use(cors());
-const baseURL = "https://9anime.to/";
+const baseURL = "https://gogoanime.ai/";
 
 
 app.get("/api/popular/:page", (req, res) => {
