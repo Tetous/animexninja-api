@@ -9,14 +9,14 @@ const baseURL = "https://gogoanime.ai/";
 
 app.get("/api/home", (req, res) => {
   let info = {
-    popular: "https://anime-x.vercel.app/api/popular/:page",
-    details: "https://anime-x.vercel.app/api/details/:id",
-    search: "https://anime-x.vercel.app/api/search/:word/:page",
-    episode_link: "https://anime-x.vercel.app/api/watching/:id/:episode",
-    genre: "https://anime-x.vercel.app/api/genre/:type/:page",
-    recently_added: "https://anime-x.vercel.app/api/recentlyadded/:page",
-    anime_list: "https://anime-x.vercel.app/api/list/:page",
-    genrelist: "https://anime-x.vercel.app/api/genrelist",
+    popular: "https://animexninja-api-88lcnl42i-tetous.vercel.app/api/popular/:page",
+    details: "https://animexninja-api-88lcnl42i-tetous.vercel.app/api/details/:id",
+    search: "https://animexninja-api-88lcnl42i-tetous.vercel.app/api/search/:word/:page",
+    episode_link: "https://animexninja-api-88lcnl42i-tetous.vercel.app/api/watching/:id/:episode",
+    genre: "https://animexninja-api-88lcnl42i-tetous.vercel.app/api/genre/:type/:page",
+    recently_added: "https://animexninja-api-88lcnl42i-tetous.vercel.app/api/recentlyadded/:page",
+    anime_list: "https://animexninja-api-88lcnl42i-tetous.vercel.app/api/list/:page",
+    genrelist: "https://animexninja-api-88lcnl42i-tetous.vercel.app/api/genrelist",
   };
   res.send(info);
 });
