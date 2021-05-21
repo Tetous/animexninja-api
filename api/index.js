@@ -3,11 +3,23 @@ const { v4 } = require("uuid");
 const cheerio = require("cheerio");
 const cors = require("cors");
 const rs = require("request");
-const port = 8080;
+const port = 5000;
 app.use(cors());
 const baseURL = "https://gogoanime.ai/";
 
-
+app.get("/api/home", (req, res) => {
+  let info = {
+    popular: "https://animexninja-api-ocvcp43vj-tetous.vercel.app//api/popular/:page",
+    details: "https://animexninja-api-ocvcp43vj-tetous.vercel.app//api/details/:id",
+    search: "https://animexninja-api-ocvcp43vj-tetous.vercel.app//api/search/:word/:page",
+    episode_link: "hhttps://animexninja-api-ocvcp43vj-tetous.vercel.app//api/watching/:id/:episode",
+    genre: "https://animexninja-api-ocvcp43vj-tetous.vercel.app//api/genre/:type/:page",
+    recently_added: "https://animexninja-api-ocvcp43vj-tetous.vercel.app//api/recentlyadded/:page",
+    anime_list: "https://animexninja-api-ocvcp43vj-tetous.vercel.app//api/list/:page",
+    genrelist: "https://animexninja-api-ocvcp43vj-tetous.vercel.app//api/genrelist",
+  };
+  res.send(info);
+});
 app.get("/api/popular/:page", (req, res) => {
   let results = [];
   let page = req.params.page;
@@ -321,6 +333,6 @@ app.get("/api/list/:variable/:page", (req, res) => {
   });
 });
 
-app.listen(port, () => console.log("running on 8080"));
+app.listen(port, () => console.log("running on 5000"));
 
 module.exports = app;
